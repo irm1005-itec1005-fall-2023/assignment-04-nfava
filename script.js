@@ -61,6 +61,16 @@ for (let i = 0; 1 < todoItems.length; i++){
   }
 }
 
+function markToDoItemAsCompleted(todoId) {
+  // Implement the logic to mark a task as completed here
+  const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
+
+  if (itemIndex !== -1) {
+    todoItems[itemIndex].completed = true;
+    
+  }
+}
+
 //
 // Inits & Event Listeners
 //
