@@ -18,6 +18,7 @@ const headingText = "To do. To done. ✅";
 let appContainer = document.getElementById(appID);
 let todoList = document.getElementById("TodoList");
 let todoInput = document.getElementById("TodoInput");
+let addTodoButton = document.getElementById("addTodo");
 //
 // Functions
 //
@@ -87,3 +88,6 @@ function clearCompletedTasks() {
 // Inits & Event Listeners
 //
 inititialise();
+
+addTodoButton.addEventListener("click");
+todoList.addEventListener("click");
