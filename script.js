@@ -37,6 +37,18 @@ function inititialise() {
   console.log("App successfully initialised");
 }
 
+function addToDoItem(text) {
+  // Implement the logic to add a task here
+  let todo = {
+    id: nextID,
+    text: text,
+    completed: false,
+  };
+  todoItems.push(todo);
+  nextID++;
+  console.log(todoItems);
+}
+
 //
 // Inits & Event Listeners
 //
