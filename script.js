@@ -71,6 +71,22 @@ function markToDoItemAsCompleted(todoId) {
   }
 }
 
+function deleteToDoItem(todoId) {
+  // Implement the logic to remove a task here
+
+const itemIndex = todoItems.findIndex(todo => todo.id === todoId);
+
+  if( itemIndex != -1){
+    todoItems.splice(itemIndex,1);
+  }
+}
+
+
+function clearCompletedTasks() {
+  // Implement the logic to clear completed tasks here
+    todoItems = todoItems.filter(todo => !todo.completed);
+}
+
 //
 // Inits & Event Listeners
 //
