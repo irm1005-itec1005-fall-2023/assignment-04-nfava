@@ -7,7 +7,8 @@
 
 //
 // Variables
-//
+let todoItems = [];
+let nextID = 1;
 
 // Constants
 const appID = "app";
