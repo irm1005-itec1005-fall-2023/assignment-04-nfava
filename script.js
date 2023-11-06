@@ -38,7 +38,6 @@ function inititialise() {
 }
 
 function addToDoItem(text) {
-  // Implement the logic to add a task here
   let todo = {
     id: nextID,
     text: text,
@@ -50,7 +49,6 @@ function addToDoItem(text) {
 }
 
 function removeToDoItem(todoId) {
-  // Implement the logic to add a task here
 for (let i = 0; 1 < todoItems.length; i++){
 
   if(todoItems[i].id === todoId){
@@ -62,7 +60,6 @@ for (let i = 0; 1 < todoItems.length; i++){
 }
 
 function markToDoItemAsCompleted(todoId) {
-  // Implement the logic to mark a task as completed here
   const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
 
   if (itemIndex !== -1) {
@@ -72,8 +69,6 @@ function markToDoItemAsCompleted(todoId) {
 }
 
 function deleteToDoItem(todoId) {
-  // Implement the logic to remove a task here
-
 const itemIndex = todoItems.findIndex(todo => todo.id === todoId);
 
   if( itemIndex != -1){
@@ -83,7 +78,6 @@ const itemIndex = todoItems.findIndex(todo => todo.id === todoId);
 
 
 function clearCompletedTasks() {
-  // Implement the logic to clear completed tasks here
     todoItems = todoItems.filter(todo => !todo.completed);
 }
 
