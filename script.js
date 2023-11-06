@@ -16,7 +16,8 @@ const headingText = "To do. To done. ✅";
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
-
+let todoList = document.getElementById("TodoList");
+let todoInput = document.getElementById("TodoInput");
 //
 // Functions
 //
