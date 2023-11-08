@@ -79,6 +79,16 @@ function addTodoItem(text){
   nextID++;
   console.log(todoItems);
 }
+
+function markToDoItemAsCompleted(todoId) {
+  // Implement the logic to mark a task as completed here
+  const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
+
+  if (itemIndex !== -1) {
+    todoItems[itemIndex].completed = true;
+    
+  }
+}
 //
 // Inits & Event Listeners
 //
