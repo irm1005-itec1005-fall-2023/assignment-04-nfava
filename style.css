@@ -33,6 +33,17 @@ body {
   background-color: var(--body-background-colour);
 }
 
+
+.Container {
+background-color: #1d3557;
+padding: 20px;
+}
+
+h2 {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
 main {
   min-height: 100vh;
 
@@ -41,6 +52,11 @@ main {
   align-items: center;
 }
 
+.Todo-Container{
+  background-color: #457b9d;
+  padding: 20px;
+  border-radius: 10px;
+}
 
 /****** Screen reader text utility clsas *******/
 .sr-only {
