@@ -89,6 +89,9 @@ function markToDoItemAsCompleted(todoId) {
     
   }
 }
+function deleteTodoItem(todoId) {
+  todoItems = todoItems.filter((todo) => todo.id !== todoId);
+}
 //
 // Inits & Event Listeners
 //
