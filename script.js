@@ -98,3 +98,5 @@ function deleteTodoItem(todoId) {
 
 addTodoButton.addEventListener("click", handleAddTodo);
 todoList.addEventListener("click",handleClick);
+
+renderTodoList();
