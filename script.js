@@ -13,7 +13,7 @@ let nextID = 1;
 
 
 // DOM Elements
-let appContainer = document.getElementById(appID);
+//let appContainer = document.getElementById(appID);
 let todoList = document.getElementById("TodoList");
 let todoInput = document.getElementById("TodoInput");
 let addTodoButton = document.getElementById("addTodo");
@@ -21,22 +21,7 @@ let addTodoButton = document.getElementById("addTodo");
 // Functions
 //
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
 
 function renderTodoList() {
 for (const todo of todoItems){
@@ -57,23 +42,40 @@ function handleAddTodo(){
   
   if(text !==""){
     addTodoItem(text);
+    console.log(todoItems);
     todoInput.value = "";
     renderTodoList();
+
   }
 }
-
+const addButton = document.getElementById("addTodo");
+addButton.addEventListener("click", handleClick);
 function handleClick() {
-  if(event.target.classList.contains("delete-btn")){
-    const todoId = parseInt(event.target.getAttribute(data-id));
-    deleteTodoItem(todoId);
-    renderTodoList();
-  }
+
+const myText =  todoInput.value;
+console.log("button clicked", myText);
+
+
+//  if(event.target.classList.contains("delete-btn")){
+  //  const todoId = parseInt(event.target.getAttribute(data-id));
+    //deleteTodoItem(todoId);
+    //renderTodoList();
+  
 }
 
+function addTodoItem(text){
+  let todo = {
+    id: nextID,
+    text: text,
+    completed: false,
+  };
+  todoItems.push(todo);
+  nextID++;
+  console.log(todoItems);
+}
 //
 // Inits & Event Listeners
 //
-inititialise();
 
 addTodoButton.addEventListener("click", handleAddTodo);
 todoList.addEventListener("click",handleClick);
