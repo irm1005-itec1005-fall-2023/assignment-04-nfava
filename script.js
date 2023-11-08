@@ -54,37 +54,22 @@ for (const todo of todoItems){
 
 }
 
-function removeToDoItem(todoId) {
-for (let i = 0; 1 < todoItems.length; i++){
-
-  if(todoItems[i].id === todoId){
-
-  todoItems.splice(i,1);
-   break;
-  }
-  }
-}
-}
-function markToDoItemAsCompleted(todoId) {
-  const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
-
-  if (itemIndex !== -1) {
-    todoItems[itemIndex].completed = true;
-    
+function handleAddTodo(){
+  const text = todoInput.value.trim();
+  
+  if(text !==""){
+    addTodoItem(text);
+    todoInput.value = "";
+    renderTodoList();
   }
 }
 
-function deleteToDoItem(todoId) {
-const itemIndex = todoItems.findIndex(todo => todo.id === todoId);
-
-  if( itemIndex != -1){
-    todoItems.splice(itemIndex,1);
+function handleClick() {
+  if(event.target.classList.contains("delete-btn")){
+    const todoId = parseInt(event.target.getAttribute(data-id));
+    deleteTodoItem(todoId);
+    renderTodoList();
   }
-}
-
-
-function clearCompletedTasks() {
-    todoItems = todoItems.filter(todo => !todo.completed);
 }
 
 //
