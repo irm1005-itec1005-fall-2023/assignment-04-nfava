@@ -51,19 +51,11 @@ function handleAddTodo(event){
     const todoId = parseInt(event.target.getAttribute("data-id"));
     markAsCompleted(todoId);
     renderTodoList();
-  } else if (event.target.classList.contains("delete-btn")) {
-    const todoId = parseInt(event.target.getAttribute("data-id"));
-    deleteTodoItem(todoId);
-    renderTodoList();
-  }
   
 }
 const addButton = document.getElementById("addTodo");
 addButton.addEventListener("click", handleClick);
 function handleClick() {
-
-const deleteutton = document.getElementById("addTodo");
-deleteButton.addEventListener("click", handleAddTodo);
 
 const myText =  todoInput.value;
 console.log("button clicked", myText);
@@ -105,5 +97,3 @@ function deleteTodoItem(todoId) {
 
 addTodoButton.addEventListener("click", handleAddTodo);
 todoList.addEventListener("click",handleClick);
-
-renderTodoList();
