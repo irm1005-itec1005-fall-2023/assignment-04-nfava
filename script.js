@@ -40,15 +40,18 @@ function inititialise() {
   console.log("App successfully initialised");
 }
 
-function addToDoItem(text) {
-  let todo = {
-    id: nextID,
-    text: text,
-    completed: false,
-  };
-  todoItems.push(todo);
-  nextID++;
-  console.log(todoItems);
+function renderTodoList() {
+for (const todo of todoItems){
+  const listItem = document.createElement("li");
+  listItem.innerHTML = `<span>${todo.id}</span>
+  <button data-id="${todo.id}" class="delete-btn">Delete</button>`;
+
+  if (todo.completed){
+    listItem.classList.add("completed");
+  }
+  todoList.appendChild(listItem);
+}
+
 }
 
 function removeToDoItem(todoId) {
@@ -61,7 +64,7 @@ for (let i = 0; 1 < todoItems.length; i++){
   }
   }
 }
-
+}
 function markToDoItemAsCompleted(todoId) {
   const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
 
