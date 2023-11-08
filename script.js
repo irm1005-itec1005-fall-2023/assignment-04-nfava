@@ -77,5 +77,5 @@ function handleClick() {
 //
 inititialise();
 
-addTodoButton.addEventListener("click");
-todoList.addEventListener("click");
+addTodoButton.addEventListener("click", handleAddTodo);
+todoList.addEventListener("click",handleClick);
