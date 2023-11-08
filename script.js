@@ -11,7 +11,7 @@ let todoItems = [];
 let nextID = 1;
 
 
-
+222
 // DOM Elements
 //let appContainer = document.getElementById(appID);
 let todoList = document.getElementById("TodoList");
@@ -27,7 +27,8 @@ function renderTodoList() {
 for (const todo of todoItems){
   const listItem = document.createElement("li");
   listItem.innerHTML = `<span>${todo.id}</span>
-  <button data-id="${todo.id}" class="delete-btn">Delete</button>`;
+  <button data-id="${todo.id}" class="delete-btn">Delete</button>
+  <button data-id="${todo.id}" class="Completed-btn">Completed</button`;
 
   if (todo.completed){
     listItem.classList.add("completed");
@@ -37,7 +38,7 @@ for (const todo of todoItems){
 
 }
 
-function handleAddTodo(){
+function handleAddTodo(event){
   const text = todoInput.value.trim();
   
   if(text !==""){
@@ -46,7 +47,12 @@ function handleAddTodo(){
     todoInput.value = "";
     renderTodoList();
 
+  } else  if (event.target.classList.contains("complete-btn")) {
+    const todoId = parseInt(event.target.getAttribute("data-id"));
+    markAsCompleted(todoId);
+    renderTodoList();
   }
+  
 }
 const addButton = document.getElementById("addTodo");
 addButton.addEventListener("click", handleClick);
