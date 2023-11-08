@@ -10,9 +10,7 @@
 let todoItems = [];
 let nextID = 1;
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
