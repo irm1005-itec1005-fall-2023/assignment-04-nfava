@@ -11,7 +11,7 @@ let todoItems = [];
 let nextID = 1;
 
 
-222
+
 // DOM Elements
 //let appContainer = document.getElementById(appID);
 let todoList = document.getElementById("TodoList");
