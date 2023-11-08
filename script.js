@@ -53,6 +53,7 @@ function handleAddTodo(event){
     renderTodoList();
   
 }
+}
 const addButton = document.getElementById("addTodo");
 addButton.addEventListener("click", handleClick);
 function handleClick() {
