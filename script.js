@@ -50,11 +50,11 @@ function handleAddTodo(){
     renderTodoList();
   }
 }
+
 const addButton = document.getElementById("addTodo");
 addButton.addEventListener("click", handleAddTodo);
 
 function handleClick(event) {
-
 const myText =  todoInput.value;
 console.log("button clicked", myText);
 
@@ -82,7 +82,6 @@ function addTodoItem(text){
 }
 
 function markToDoItemAsCompleted(todoId) {
-  // Implement the logic to mark a task as completed here
   const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
 
   if (itemIndex !== -1) {
@@ -90,9 +89,11 @@ function markToDoItemAsCompleted(todoId) {
     
   }
 }
+
 function deleteTodoItem(todoId) {
   todoItems = todoItems.filter((todo) => todo.id !== todoId);
 }
+
 //
 // Inits & Event Listeners
 //
