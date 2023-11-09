@@ -24,6 +24,8 @@ let addTodoButton = document.getElementById("addTodo");
 
 
 function renderTodoList() {
+  todoList.innerHTML = "";
+  
 for (const todo of todoItems){
   const listItem = document.createElement("li");
   listItem.innerHTML = `<span>${todo.id}</span>
@@ -46,27 +48,27 @@ function handleAddTodo(event){
     console.log(todoItems);
     todoInput.value = "";
     renderTodoList();
+  }
+}
+const addButton = document.getElementById("addTodo");
+addButton.addEventListener("click", handleClick);
 
+function handleClick(event) {
+
+const myText =  todoInput.value;
+console.log("button clicked", myText);
+
+
+ if(event.target.classList.contains("delete-btn")){
+    const todoId = parseInt(event.target.getAttribute(data-id));
+    deleteTodoItem(todoId);
+    renderTodoList();
   } else  if (event.target.classList.contains("complete-btn")) {
     const todoId = parseInt(event.target.getAttribute("data-id"));
     markAsCompleted(todoId);
     renderTodoList();
   
 }
-}
-const addButton = document.getElementById("addTodo");
-addButton.addEventListener("click", handleClick);
-function handleClick() {
-
-const myText =  todoInput.value;
-console.log("button clicked", myText);
-
-
-//  if(event.target.classList.contains("delete-btn")){
-  //  const todoId = parseInt(event.target.getAttribute(data-id));
-    //deleteTodoItem(todoId);
-    //renderTodoList();
-  
 }
 
 function addTodoItem(text){
