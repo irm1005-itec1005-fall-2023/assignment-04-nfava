@@ -67,8 +67,7 @@ console.log("button clicked", myText);
     const todoId = parseInt(event.target.getAttribute("data-id"));
     markAsCompleted(todoId);
     renderTodoList();
-  
-}
+  }
 }
 
 function addTodoItem(text){
