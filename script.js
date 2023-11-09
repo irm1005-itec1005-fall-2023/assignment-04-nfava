@@ -30,7 +30,7 @@ for (const todo of todoItems){
   const listItem = document.createElement("li");
   listItem.innerHTML = `<span>${todo.id}</span>
   <button data-id="${todo.id}" class="delete-btn">Delete</button>
-  <button data-id="${todo.id}" class="Completed-btn">Completed</button`;
+  <button data-id="${todo.id}" class="Complete-btn">Completed</button`;
 
   if (todo.completed){
     listItem.classList.add("completed");
@@ -65,7 +65,7 @@ console.log("button clicked", myText);
     renderTodoList();
   } else  if (event.target.classList.contains("complete-btn")) {
     const todoId = parseInt(event.target.getAttribute("data-id"));
-    markAsCompleted(todoId);
+    markToDoItemAsCompleted(todoId);
     renderTodoList();
   }
 }
