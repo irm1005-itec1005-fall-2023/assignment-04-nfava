@@ -40,7 +40,7 @@ for (const todo of todoItems){
 
 }
 
-function handleAddTodo(event){
+function handleAddTodo(){
   const text = todoInput.value.trim();
   
   if(text !==""){
@@ -51,7 +51,7 @@ function handleAddTodo(event){
   }
 }
 const addButton = document.getElementById("addTodo");
-addButton.addEventListener("click", handleClick);
+addButton.addEventListener("click", handleAddTodo);
 
 function handleClick(event) {
 
@@ -63,7 +63,7 @@ console.log("button clicked", myText);
     const todoId = parseInt(event.target.getAttribute("data-id"));
     deleteTodoItem(todoId);
     renderTodoList();
-  } else  if (event.target.classList.contains("complete-btn")) {
+  } else  if (event.target.classList.contains("Complete-btn")) {
     const todoId = parseInt(event.target.getAttribute("data-id"));
     markToDoItemAsCompleted(todoId);
     renderTodoList();
