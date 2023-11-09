@@ -29,8 +29,8 @@ function renderTodoList() {
 for (const todo of todoItems){
   const listItem = document.createElement("li");
   listItem.innerHTML = `<span>${todo.id}</span>
-  <button data-id="${todo.id}" class="delete-btn">Delete</button>
-  <button data-id="${todo.id}" class="Complete-btn">Completed</button`;
+  <button data-id="${todo.text}" class="delete-btn">Delete</button>
+  <button data-id="${todo.text}" class="Complete-btn">Completed</button`;
 
   if (todo.completed){
     listItem.classList.add("completed");
