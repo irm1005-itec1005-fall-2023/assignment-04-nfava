@@ -60,7 +60,7 @@ console.log("button clicked", myText);
 
 
  if(event.target.classList.contains("delete-btn")){
-    const todoId = parseInt(event.target.getAttribute(data-id));
+    const todoId = parseInt(event.target.getAttribute("data-id"));
     deleteTodoItem(todoId);
     renderTodoList();
   } else  if (event.target.classList.contains("complete-btn")) {
