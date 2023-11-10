@@ -63,10 +63,12 @@ console.log("button clicked", myText);
     const todoId = parseInt(event.target.getAttribute("data-id"));
     deleteTodoItem(todoId);
     renderTodoList();
+    console.log(todoItems);
   } else  if (event.target.classList.contains("Complete-btn")) {
     const todoId = parseInt(event.target.getAttribute("data-id"));
     markToDoItemAsCompleted(todoId);
     renderTodoList();
+    console.log(todoItems);
   }
 }
 
