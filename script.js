@@ -25,6 +25,11 @@ let addTodoButton = document.getElementById("addTodo");
 
 function renderTodoList() {
   todoList.innerHTML = "";
+
+
+  let todoListDisplay = document.getElementById("todoListDisplay");
+
+  todoListDisplay.innerHTML = "";
   
 for (const todo of todoItems){
   const listItem = document.createElement("li");
