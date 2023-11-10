@@ -40,7 +40,7 @@ for (const todo of todoItems){
   if (todo.completed){
     listItem.classList.add("completed");
   }
-  todoList.appendChild(listItem);
+  todoListDisplay.appendChild(listItem);
 }
 
 }
