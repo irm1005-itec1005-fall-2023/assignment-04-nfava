@@ -32,6 +32,7 @@ for (const todo of todoItems){
 
   if (todo.completed){
     listItem.classList.add("completed");
+    listItem.querySelector(".complete-btn").disabled = true;
   }
   todoList.appendChild(listItem);
 }
