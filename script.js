@@ -3,9 +3,6 @@
  * 
  *
  */
-
-
-//
 // Variables
 let todoItems = [];
 let nextID = 1;
@@ -13,16 +10,12 @@ let nextID = 1;
 
 
 // DOM Elements
-//let appContainer = document.getElementById(appID);
+
 let todoList = document.getElementById("TodoList");
 let todoInput = document.getElementById("TodoInput");
 let addTodoButton = document.getElementById("addTodo");
-//
+
 // Functions
-//
-
-
-
 function renderTodoList() {
   todoList.innerHTML = "";
   
