@@ -16,6 +16,11 @@ let todoInput = document.getElementById("TodoInput");
 let addTodoButton = document.getElementById("addTodo");
 
 // Functions
+function displayNotification(message) {
+  const notificationElement = document.getElementById("notification");
+  notificationElement.textContent = message;
+}
+
 function renderTodoList() {
   todoList.innerHTML = "";
   
@@ -29,6 +34,10 @@ for (const todo of todoItems){
     listItem.classList.add("completed");
   }
   todoList.appendChild(listItem);
+}
+if (todoItems.length > 0) {
+  const lastAddedTask = todoItems[todoItems.length - 1].text;
+  displayNotification(`New task added: "${lastAddedTask}"`);
 }
 
 }
