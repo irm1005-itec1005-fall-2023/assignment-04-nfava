@@ -60,7 +60,6 @@ function handleClick(event) {
 const myText =  todoInput.value;
 console.log("button clicked", myText);
 
-
  if(event.target.classList.contains("delete-btn")){
     const todoId = parseInt(event.target.getAttribute("data-id"));
     deleteTodoItem(todoId);
@@ -98,9 +97,6 @@ function deleteTodoItem(todoId) {
   todoItems = todoItems.filter((todo) => todo.id !== todoId);
 }
 
-//
 // Inits & Event Listeners
-//
-
 addTodoButton.addEventListener("click", handleAddTodo);
 todoList.addEventListener("click",handleClick);
