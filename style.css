@@ -54,7 +54,7 @@ main {
 .Todo-Container{
   background-color: #457b9d;
   padding: 20px;
-  border-radius: 10;
+  border-radius: 10px;
 }
 .Completed {
   text-decoration: line-through;
@@ -64,7 +64,7 @@ ul {
   border: 1px solid red;
 }
 
-ul#TodoList li {
+#TodoList li {
   margin: 2rem 0;
  color: #a8dadc;
  border: 1px solid red ;
