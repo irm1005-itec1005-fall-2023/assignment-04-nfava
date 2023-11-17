@@ -62,13 +62,15 @@ main {
 
 ul { 
   border: 1px solid rgb(16, 16, 16);
+  padding: 0px;
 }
 
 #TodoList li {
-  margin: 2rem 0;
+  margin: 2rem 10px;
  color: #a8dadc;
- border: 1px solid rgb(46, 40, 40) ;
-
+ border: 1px solid rgb(131, 14, 14) ;
+ border-radius:  5px;
+ padding: 10px;
 
 } 
 
