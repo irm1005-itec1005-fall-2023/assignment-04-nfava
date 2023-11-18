@@ -40,7 +40,6 @@ for (const todo of todoItems){
 }
 if (todoItems.length > 0) {
   const lastAddedTask = todoItems[todoItems.length - 1].text;
-
 }
 
 }
