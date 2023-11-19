@@ -11,7 +11,7 @@
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
   --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
+  --colour-peppermint: rgb(125, 108, 197);
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
