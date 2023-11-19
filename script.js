@@ -14,7 +14,7 @@ let nextID = 1;
 let todoList = document.getElementById("TodoList");
 let todoInput = document.getElementById("TodoInput");
 let addTodoButton = document.getElementById("addTodo");
-
+let clearAllButton = document.getElementById("ClearAll");
 // Functions
 function displayNotification(message) {
   const notificationElement = document.getElementById("notification");
@@ -103,6 +103,14 @@ function deleteTodoItem(todoId) {
   todoItems = todoItems.filter((todo) => todo.id !== todoId);
 }
 
+function clearAllTodos() {
+  todoItems = [];
+  renderTodoList();
+}
+
+
+
 // Inits & Event Listeners
 addTodoButton.addEventListener("click", handleAddTodo);
 todoList.addEventListener("click",handleClick);
+clearAllButton.addEventListener("click", clearAllTodos);
