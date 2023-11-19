@@ -26,6 +26,10 @@ function renderTodoList() {
   
 for (const todo of todoItems){
   const listItem = document.createElement("li");
+
+  if (todo.completed) {
+    listItem.classList.add("completed");
+  }
   listItem.innerHTML = 
   `<h2>${todo.text}</h2>
   <span>${todo.id}</span>
