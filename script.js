@@ -34,6 +34,10 @@ for (const todo of todoItems){
   `;
 
   if (todo.completed){
+    const checkMark = document.createElement("span");
+    checkMark.innerHTML = "✅";
+    checkMark.classList.add("status-icon");
+    listItem.appendChild(checkMark);
     listItem.classList.add("completed");
   }
   todoList.appendChild(listItem);
