@@ -81,6 +81,13 @@ ul {
   color: #090909;
 }
 
+#TodoInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
 #addTodo, #ClearAll {
   padding: 8px 12px;
   font-size: 14px;
