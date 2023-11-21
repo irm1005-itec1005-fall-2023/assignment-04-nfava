@@ -106,6 +106,7 @@ function deleteTodoItem(todoId) {
 function clearAllTodos() {
   todoItems = [];
   renderTodoList();
+  nextID = 1;
 }
 
 
