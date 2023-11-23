@@ -31,6 +31,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
   background-color: var(--body-background-colour);
+  background-color: var(--body-background-colour);
+  background-image: url('todolist.jpg');
+  background-size: cover;
+  background-position: center;
+
 }
 
 .Container {
