@@ -40,7 +40,7 @@ body {
 
 .Container {
 background-color: #1d3557;
-padding: 20px;
+padding: 10px;
 }
 
 h2 {
@@ -58,8 +58,8 @@ main {
 
 .Todo-Container{
   background-color: #457b9d;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 .Completed {
   text-decoration: line-through;
@@ -75,7 +75,7 @@ ul {
 
 #TodoList li {
   margin: 2rem 10px;
- color: #a8dadc;
+ color: rgb(232, 239, 239);
  border: 1px solid rgb(131, 14, 14) ;
  border-radius:  5px;
  padding: 10px;
@@ -83,7 +83,7 @@ ul {
 } 
 
 #TodoList li h2 {
-  color: #090909;
+  color: #fff;
 }
 
 #TodoInput {
