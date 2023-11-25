@@ -11,7 +11,7 @@
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
   --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
+  --colour-peppermint: rgb(125, 108, 197);
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
@@ -31,6 +31,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
   background-color: var(--body-background-colour);
+  background-color: var(--body-background-colour);
+  background-image: url('todolist.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.Container {
+background-color: #1d3557;
+padding: 10px;
+}
+
+h2 {
+  color: #e5eaf0;
+  margin-bottom: 20px;
 }
 
 main {
@@ -39,6 +54,59 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Todo-Container{
+  background-color: #457b9d;
+  padding: 10px;
+  border-radius: 5px;
+}
+.Completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+
+
+ul { 
+  border: 1px solid rgb(10, 10, 10);
+  padding: 0px;
+}
+
+#TodoList li {
+  margin: 2rem 10px;
+ color: rgb(3, 3, 3);
+ border: 1px solid rgb(131, 14, 14) ;
+ border-radius:  5px;
+ padding: 10px;
+
+} 
+
+#TodoList li h2 {
+  color: #fff;
+}
+
+#TodoInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+#addTodo, #ClearAll {
+  padding: 8px 12px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#notification {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  display: none;
 }
 
 

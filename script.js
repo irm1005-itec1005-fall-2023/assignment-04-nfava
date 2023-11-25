@@ -3,41 +3,116 @@
  * 
  *
  */
-
-
-//
 // Variables
-//
+let todoItems = [];
+let nextID = 1;
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+
 
 // DOM Elements
-let appContainer = document.getElementById(appID);
 
-//
+let todoList = document.getElementById("TodoList");
+let todoInput = document.getElementById("TodoInput");
+let addTodoButton = document.getElementById("addTodo");
+let clearAllButton = document.getElementById("ClearAll");
 // Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
+function displayNotification(message) {
+  const notificationElement = document.getElementById("notification");
+  notificationElement.textContent = message;
 }
 
-//
+function renderTodoList() {
+  todoList.innerHTML = "";
+  
+for (const todo of todoItems){
+  const listItem = document.createElement("li");
+  listItem.innerHTML = 
+  `<h2>${todo.text}</h2>
+  <span>${todo.id}</span>
+  <button data-id="${todo.id}" class="delete-btn">Delete</button>
+  <button data-id="${todo.id}" class="Complete-btn">Completed</button>
+  `;
+
+  if (todo.completed){
+    const checkMark = document.createElement("span");
+    checkMark.innerHTML = "✅";
+    checkMark.classList.add("status-icon");
+    listItem.appendChild(checkMark);
+    listItem.classList.add("completed");
+  }
+  todoList.appendChild(listItem);
+}
+if (todoItems.length > 0) {
+  const lastAddedTask = todoItems[todoItems.length - 1].text;
+}
+
+}
+
+function handleAddTodo(){
+  const text = todoInput.value.trim();
+  
+  if(text !==""){
+    addTodoItem(text);
+    console.log(todoItems);
+    todoInput.value = "";
+    renderTodoList();
+  }
+}
+
+const addButton = document.getElementById("addTodo");
+addButton.addEventListener("click", handleAddTodo);
+
+function handleClick(event) {
+const myText =  todoInput.value;
+console.log("button clicked", myText);
+
+ if(event.target.classList.contains("delete-btn")){
+    const todoId = parseInt(event.target.getAttribute("data-id"));
+    deleteTodoItem(todoId);
+    renderTodoList();
+    console.log(todoItems);
+  } else  if (event.target.classList.contains("Complete-btn")) {
+    const todoId = parseInt(event.target.getAttribute("data-id"));
+    markToDoItemAsCompleted(todoId);
+    renderTodoList();
+    console.log(todoItems);
+  }
+}
+
+
+function addTodoItem(text){
+  let todo = {
+    id: nextID,
+    text: text,
+    completed: false,
+  };
+  todoItems.push(todo);
+  nextID++;
+  console.log(todoItems);
+}
+
+function markToDoItemAsCompleted(todoId) {
+  const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
+
+  if (itemIndex !== -1) {
+    todoItems[itemIndex].completed = true;
+    
+  }
+}
+
+function deleteTodoItem(todoId) {
+  todoItems = todoItems.filter((todo) => todo.id !== todoId);
+}
+
+function clearAllTodos() {
+  todoItems = [];
+  renderTodoList();
+  nextID = 1;
+}
+
+
+
 // Inits & Event Listeners
-//
-inititialise();
+addTodoButton.addEventListener("click", handleAddTodo);
+todoList.addEventListener("click",handleClick);
+clearAllButton.addEventListener("click", clearAllTodos);
