@@ -79,6 +79,7 @@ console.log("button clicked", myText);
   }
 }
 
+
 function addTodoItem(text){
   let todo = {
     id: nextID,
